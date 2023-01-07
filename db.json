@@ -1,0 +1,36 @@
+{
+  "songs": [
+    {
+      "id": 1,
+      "name": "again",
+      "artist": "YUI",
+      "album": "RUNNING IN THE SUN",
+      "dirname": "yui_again",
+      "duration": 228
+    },
+    {
+      "id": 2,
+      "name": "Hitoribocchi Tokyo",
+      "artist": "Kessoku Band",
+      "album": "Kessoku Band",
+      "dirname": "kessoku_band_hitoribocchi_tokyo",
+      "duration": 232
+    },
+    {
+      "id": 3,
+      "name": "Shinjidai",
+      "artist": "Ado",
+      "album": "ONE PIECE FILM RED Uta no Uta",
+      "dirname": "ado_shinjidai",
+      "duration": 226
+    },
+    {
+      "id": 4,
+      "name": "Distortion!!",
+      "artist": "Kessoku Band",
+      "album": "Kessoku Band",
+      "dirname": "kessoku_band_distortion",
+      "duration": 203
+    }
+  ]
+}
