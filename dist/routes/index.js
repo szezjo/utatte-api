@@ -1,10 +1,14 @@
 import { Router } from 'express';
+import lodash from 'lodash';
 import bodyParser from 'body-parser';
 import fs from 'fs-extra';
 import { Low, JSONFile } from 'lowdb';
 import { generateDirname } from '../utils/generateDirname.js';
 const adapter = new JSONFile('./db.json');
-const db = new Low(adapter);
+class LowWithLodash extends Low {
+    c = lodash.chain(this).get('data');
+}
+const db = new LowWithLodash(adapter);
 const router = Router();
 const jsonParser = bodyParser.json();
 /* GET home page. */
@@ -15,13 +19,16 @@ router.post('/addSong', jsonParser, async (req, res) => {
     try {
         await db.read();
         db.data ||= { songs: [] };
-        const { name, artist, album, duration } = req.body;
+        const { name, artist, album, duration, romajiName, romajiArtist, romajiAlbum } = req.body;
         db.data.songs.push({
             id: db.data.songs.length ? db.data.songs[db.data.songs.length - 1].id + 1 : 1,
             name: name,
             artist: artist,
             album: album,
-            dirname: generateDirname(name, artist),
+            dirname: generateDirname(romajiName || name, romajiArtist || artist),
+            romajiName: romajiName || name,
+            romajiArtist: romajiArtist || artist,
+            romajiAlbum: romajiAlbum || album,
             duration: duration,
         });
         db.write();
@@ -61,6 +68,24 @@ router.delete('/removeSong/:songId', async (req, res) => {
         res.json({ ok: false });
     }
 });
+// router.post('/updateSongsRomaji', async (req: Request, res: Response) => {
+//   try {
+//     await db.read();
+//     if (db.data && db.data.songs && db.data.songs.length) {
+//       db.data.songs = db.data.songs.map((song) => {
+//         const newSong = song;
+//         if (!song.romajiName) newSong.romajiName = song.name;
+//         if (!song.romajiArtist) newSong.romajiArtist = song.artist;
+//         if (!song.romajiAlbum) newSong.romajiAlbum = song.album;
+//         return newSong;
+//       });
+//     }
+//     db.write();
+//   } catch (error) {
+//     console.error(error);
+//     res.json({ ok: false });
+//   }
+// });
 router.get('/getSong/:songId', async (req, res) => {
     try {
         await db.read();
@@ -139,6 +164,32 @@ router.get('/getCoverImage/:songId', async (req, res) => {
     }
 });
 router.get('/listSongs', async (req, res) => {
+    try {
+        await db.read();
+        if (db.data && db.data.songs)
+            res.json(db.c.get('songs').sortBy([(e) => e.name.toLowerCase(), (e) => e.artist.toLowerCase()]));
+        else
+            res.json({ ok: false });
+    }
+    catch (error) {
+        console.log(error);
+        res.json({ ok: false });
+    }
+});
+router.get('/listSongsByRomaji', async (req, res) => {
+    try {
+        await db.read();
+        if (db.data && db.data.songs)
+            res.json(db.c.get('songs').sortBy([(e) => e.romajiName.toLowerCase(), (e) => e.romajiArtist.toLowerCase()]));
+        else
+            res.json({ ok: false });
+    }
+    catch (error) {
+        console.log(error);
+        res.json({ ok: false });
+    }
+});
+router.get('/listSongsUnsorted', async (req, res) => {
     try {
         await db.read();
         if (db.data && db.data.songs)

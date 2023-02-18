@@ -4,6 +4,9 @@ type TSongMetadata = {
   album: string;
   dirname: string;
   duration: number;
+  romajiName: string;
+  romajiArtist: string;
+  romajiAlbum: string;
 };
 
 type TSongEntry = {

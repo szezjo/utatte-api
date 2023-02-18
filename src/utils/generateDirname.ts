@@ -20,6 +20,7 @@ export const generateDirname = (name: string, artist: string) => {
   const dirname = `${modArtist}_${modName}`.replace(/^_+/, '').replace(/_+$/, '');
 
   const duplicates = checkDuplicates(dirname, 0);
-  if (duplicates > 0) return dirname + `_${duplicates}`;
-  return dirname;
+  const finalDirname = duplicates > 0 ? dirname + `_${duplicates}` : dirname;
+  fs.mkdirSync(`./songs/${finalDirname}`);
+  return finalDirname;
 };

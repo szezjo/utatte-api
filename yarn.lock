@@ -127,6 +127,11 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
 
+"@types/lodash@^4.14.191":
+  version "4.14.191"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.191.tgz#09511e7f7cba275acd8b419ddac8da9a6a79e2fa"
+  integrity sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==
+
 "@types/mime@*":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-3.0.1.tgz#5f8f2bca0a5863cb69bc0b0acd88c96cb1d4ae10"
@@ -159,6 +164,11 @@
   dependencies:
     "@types/mime" "*"
     "@types/node" "*"
+
+"@types/wanakana@^4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@types/wanakana/-/wanakana-4.0.3.tgz#b67b133b223facbf28aba0338b79f523e92cf97a"
+  integrity sha512-AibaWzahBKizxmsAy8rEWSIqqcT0v9KZTS8S6zPLmStGBFdccYfXydhgwYOV+6lGqQ890MpA4h2MPET3uPk9Zg==
 
 "@types/xml2js@^0.4.11":
   version "0.4.11"
@@ -1723,6 +1733,11 @@ jstransformer@1.0.0:
     is-promise "^2.0.0"
     promise "^7.0.1"
 
+kana-romaji@^0.1.10:
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/kana-romaji/-/kana-romaji-0.1.10.tgz#605ba8a3d720d5e7e8ea5f02781953a501f71c3e"
+  integrity sha512-7k8tXEetst8mCHnO6Y+2hbyJmsCgjKbtf+UWk47VmZU9D2FQEakXl2wkhvkkgsm/IIloNtV6tcAD+rWOad+MCQ==
+
 kind-of@^3.0.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.2.2.tgz#31ea21a734bab9bbb0f32466d893aea51e4a3c64"
@@ -2866,6 +2881,11 @@ void-elements@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
   integrity sha512-qZKX4RnBzH2ugr8Lxa7x+0V6XD9Sb/ouARtiasEQCHB1EVU4NXtmHsDDrx1dO4ne5fc3J6EW05BP1Dl0z0iung==
+
+wanakana@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/wanakana/-/wanakana-5.0.2.tgz#b42c940c124eb8b5980563672d7f2c6be64cfdff"
+  integrity sha512-eYTezpLYXCr+gmVmgBBYQP7A7WJphvhyx1PkrHaMrnExTiMPrgTgFLSJgo75DnZf1Wy0lA2nukNVJg7Ptvx9zA==
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"

@@ -6,7 +6,10 @@
       "artist": "YUI",
       "album": "RUNNING IN THE SUN",
       "dirname": "yui_again",
-      "duration": 228
+      "duration": 228,
+      "romajiName": "again",
+      "romajiArtist": "YUI",
+      "romajiAlbum": "RUNNING IN THE SUN"
     },
     {
       "id": 2,
@@ -14,7 +17,10 @@
       "artist": "Kessoku Band",
       "album": "Kessoku Band",
       "dirname": "kessoku_band_hitoribocchi_tokyo",
-      "duration": 232
+      "duration": 232,
+      "romajiName": "Hitoribocchi Tokyo",
+      "romajiArtist": "Kessoku Band",
+      "romajiAlbum": "Kessoku Band"
     },
     {
       "id": 3,
@@ -22,7 +28,10 @@
       "artist": "Ado",
       "album": "ONE PIECE FILM RED Uta no Uta",
       "dirname": "ado_shinjidai",
-      "duration": 226
+      "duration": 226,
+      "romajiName": "Shinjidai",
+      "romajiArtist": "Ado",
+      "romajiAlbum": "ONE PIECE FILM RED Uta no Uta"
     },
     {
       "id": 4,
@@ -30,7 +39,131 @@
       "artist": "Kessoku Band",
       "album": "Kessoku Band",
       "dirname": "kessoku_band_distortion",
-      "duration": 203
+      "duration": 203,
+      "romajiName": "Distortion!!",
+      "romajiArtist": "Kessoku Band",
+      "romajiAlbum": "Kessoku Band"
+    },
+    {
+      "id": 5,
+      "name": "お望み通り",
+      "artist": "Cocco",
+      "album": "お望み通り",
+      "dirname": "cocco_onozomidoori",
+      "romajiName": "Onozomidoori",
+      "romajiArtist": "Cocco",
+      "romajiAlbum": "Onozomidoori",
+      "duration": 213
+    },
+    {
+      "id": 6,
+      "name": "Stepping Wind",
+      "artist": "渡辺 久美子",
+      "album": "Klonoa 2 Original Soundtrack",
+      "dirname": "kumiko_watanabe_stepping_wind",
+      "romajiName": "Stepping Wind",
+      "romajiArtist": "Kumiko Watanabe",
+      "romajiAlbum": "Klonoa 2 Original Soundtrack",
+      "duration": 270
+    },
+    {
+      "id": 7,
+      "name": "1/2",
+      "artist": "Makoto Kawamoto",
+      "album": "1/2",
+      "dirname": "makoto_kawamoto_1_2",
+      "romajiName": "1/2",
+      "romajiArtist": "Makoto Kawamoto",
+      "romajiAlbum": "1/2",
+      "duration": 315
+    },
+    {
+      "id": 8,
+      "name": "99 Luftballons",
+      "artist": "Nena",
+      "album": "Nena",
+      "dirname": "nena_99_luftballons",
+      "romajiName": "99 Luftballons",
+      "romajiArtist": "Nena",
+      "romajiAlbum": "Nena",
+      "duration": 232
+    },
+    {
+      "id": 9,
+      "name": "Adesso e Fortuna",
+      "artist": "Sherry",
+      "album": "Record of Lodoss War OVA Original Soundtrack",
+      "dirname": "sherry_adesso_e_fortuna",
+      "romajiName": "Adesso e Fortuna",
+      "romajiArtist": "Sherry",
+      "romajiAlbum": "Record of Lodoss War OVA Original Soundtrack",
+      "duration": 248
+    },
+    {
+      "id": 10,
+      "name": "Again",
+      "artist": "Beverly",
+      "album": "Again",
+      "dirname": "beverly_again",
+      "romajiName": "Again",
+      "romajiArtist": "Beverly",
+      "romajiAlbum": "Again",
+      "duration": 294
+    },
+    {
+      "id": 11,
+      "name": "Agnieszka już dawno...",
+      "artist": "Łzy",
+      "album": "The Best of Łzy",
+      "dirname": "zy_agnieszka_ju_dawno",
+      "romajiName": "Agnieszka już dawno...",
+      "romajiArtist": "Łzy",
+      "romajiAlbum": "The Best of Łzy",
+      "duration": 231
+    },
+    {
+      "id": 12,
+      "name": "Ai ga Hitoribocchi",
+      "artist": "Yoshimi Iwasaki",
+      "album": "Touch",
+      "dirname": "yoshimi_iwasaki_ai_ga_hitoribocchi",
+      "romajiName": "Ai ga Hitoribocchi",
+      "romajiArtist": "Yoshimi Iwasaki",
+      "romajiAlbum": "Touch",
+      "duration": 238
+    },
+    {
+      "id": 13,
+      "name": "Ai no Tameni.",
+      "artist": "Aya Ueto",
+      "album": "Ai no Tameni.",
+      "dirname": "aya_ueto_ai_no_tameni",
+      "romajiName": "Ai no Tameni.",
+      "romajiArtist": "Aya Ueto",
+      "romajiAlbum": "Ai no Tameni.",
+      "duration": 308
+    },
+    {
+      "id": 14,
+      "name": "Aitainante Iwasenaide",
+      "artist": "mihoro*",
+      "album": "love is alive",
+      "dirname": "mihoro__aitainante_iwasenaide",
+      "romajiName": "Aitainante Iwasenaide",
+      "romajiArtist": "mihoro*",
+      "romajiAlbum": "love is alive",
+      "duration": 238
+    },
+    {
+      "id": 15,
+      "name": "Alegria",
+      "artist": "Cirque du Soleil",
+      "album": "Alegria",
+      "dirname": "cirque_du_soleil_alegria",
+      "romajiName": "Alegria",
+      "romajiArtist": "Cirque du Soleil",
+      "romajiAlbum": "Alegria",
+      "duration": 349
     }
   ]
 }
