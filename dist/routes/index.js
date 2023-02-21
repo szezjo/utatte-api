@@ -30,6 +30,7 @@ router.post('/addSong', jsonParser, async (req, res) => {
             romajiArtist: romajiArtist || artist,
             romajiAlbum: romajiAlbum || album,
             duration: duration,
+            previewStart: 0,
         });
         db.write();
         res.json(db.data.songs);
@@ -154,6 +155,48 @@ router.get('/getCoverImage/:songId', async (req, res) => {
             if (!fs.existsSync(filePath))
                 throw new Error('File not found');
             res.download(filePath, 'cover.jpg');
+        }
+        else
+            throw new Error('Database not defined');
+    }
+    catch (error) {
+        console.log(error);
+        res.json({ ok: false });
+    }
+});
+router.get('/getVideo/:songId', async (req, res) => {
+    try {
+        await db.read();
+        if (db.data && db.data.songs && db.data.songs.length) {
+            const foundSong = db.data.songs.find((song) => song.id === parseInt(req.params.songId));
+            if (!foundSong)
+                throw new Error('Song not found');
+            const filePath = `./songs/${foundSong.dirname}/video.webm`;
+            if (!fs.existsSync(filePath))
+                throw new Error('File not found');
+            res.download(filePath, 'video.webm');
+        }
+        else
+            throw new Error('Database not defined');
+    }
+    catch (error) {
+        console.log(error);
+        res.json({ ok: false });
+    }
+});
+router.get('/getSongData/:songId', async (req, res) => {
+    try {
+        await db.read();
+        if (db.data && db.data.songs && db.data.songs.length) {
+            const foundSong = db.data.songs.find((song) => song.id === parseInt(req.params.songId));
+            if (!foundSong)
+                throw new Error('Song not found');
+            const filePath = `./songs/${foundSong.dirname}/data.json`;
+            if (!fs.existsSync(filePath))
+                throw new Error('File not found');
+            const rawData = fs.readFileSync(filePath);
+            const jsonData = JSON.parse(rawData);
+            res.json(jsonData);
         }
         else
             throw new Error('Database not defined');
