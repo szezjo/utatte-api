@@ -1,6 +1,6 @@
 # Utatte API
 
-API for Utatte application (https://github.com/szezjo/utatte-rewrite/)
+API for Utatte application (https://github.com/szezjo/utatte/)
 
 Used technologies: TypeScript, Node.js, Express, LowDB
 
